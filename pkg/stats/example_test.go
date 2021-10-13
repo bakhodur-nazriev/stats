@@ -3,7 +3,7 @@ package stats
 import (
 	"fmt"
 
-	"github.com/bakhodur-nazriev/bank/pkg/types"
+	"github.com/bakhodur-nazriev/bank/v2/pkg/types"
 )
 
 func ExampleAvg() {
@@ -11,25 +11,29 @@ func ExampleAvg() {
 		{
 			ID:     1,
 			Amount: 5,
+			Status: types.StatusFail,
 		},
 		{
 			ID:     2,
 			Amount: 10,
+			Status: types.StatusOk,
 		},
 		{
 			ID:     3,
 			Amount: 10,
+			Status: types.StatusOk,
 		},
 		{
 			ID:     4,
 			Amount: 10,
+			Status: types.StatusOk,
 		},
 	}
 
 	fmt.Println(Avg(myPayment))
 
 	// Output:
-	// 8
+	// 10
 }
 
 func ExampleTotalInCategory() {
@@ -38,26 +42,30 @@ func ExampleTotalInCategory() {
 			ID:       1,
 			Amount:   5,
 			Category: "test",
+			Status:   types.StatusFail,
 		},
 		{
 			ID:       2,
 			Amount:   10,
 			Category: "test",
+			Status:   types.StatusOk,
 		},
 		{
 			ID:       3,
 			Amount:   10,
 			Category: "test",
+			Status:   types.StatusOk,
 		},
 		{
 			ID:       4,
 			Amount:   10,
-			Category: "lol",
+			Category: "test",
+			Status:   types.StatusOk,
 		},
 	}
 
 	fmt.Println(TotalInCategory(myPayment, "test"))
 
 	// Output:
-	// 25
+	// 30
 }
