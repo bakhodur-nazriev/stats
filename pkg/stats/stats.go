@@ -35,3 +35,14 @@ func TotalInCategory(payments []types.Payment, category types.Category) (res typ
 
 	return
 }
+
+// CategoriesTotal возвращает сумму платежей пл каждой категории.
+func CategoriesTotal(payments []types.Payment) map[types.Category]types.Money {
+	categories := map[types.Category]types.Money{}
+
+	for _, payment := range payments {
+		categories[payment.Category] += payment.Amount
+	}
+
+	return categories
+}
