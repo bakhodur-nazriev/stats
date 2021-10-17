@@ -1,6 +1,8 @@
 package stats
 
-import "github.com/bakhodur-nazriev/bank/v2/pkg/types"
+import (
+	"github.com/bakhodur-nazriev/bank/v2/pkg/types"
+)
 
 // Avg рассчитывает среднюю сумму платежа.
 func Avg(payments []types.Payment) (avgSum types.Money) {
@@ -47,4 +49,21 @@ func FilteredByCategory(payments []types.Payment, categoty types.Category) []typ
 	}
 
 	return filtered
+}
+
+// CategoriesAvg рассчитывает среднюю сумму категории платежа.
+func CategoriesAvg(payments []types.Payment) map[types.Category]types.Money {
+	categories := map[types.Category]types.Money{}
+	total := map[types.Category]types.Money{}
+
+	for _, payment := range payments {
+		categories[payment.Category] += payment.Amount
+		total[payment.Category]++
+	}
+
+	for key, category := range categories {
+		categories[key] = category / total[key]
+	}
+
+	return categories
 }
