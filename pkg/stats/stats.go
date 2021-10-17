@@ -38,6 +38,19 @@ func TotalInCategory(payments []types.Payment, category types.Category) (res typ
 	return
 }
 
+// FilteredByCategory возвращает платежи в указанной категории.
+func FilteredByCategory(payments []types.Payment, categoty types.Category) []types.Payment {
+	var filtered []types.Payment
+
+	for _, payment := range payments {
+		if payment.Category == categoty {
+			filtered = append(filtered, payment)
+		}
+	}
+
+	return filtered
+}
+
 // CategoriesAvg рассчитывает среднюю сумму категории платежа.
 func CategoriesAvg(payments []types.Payment) map[types.Category]types.Money {
 	categories := map[types.Category]types.Money{}
