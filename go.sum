@@ -1,2 +1,4 @@
-github.com/bakhodur-nazriev/bank/v2 v2.0.0 h1:LPTMrs68Ig9Guv16YX3vlViOQapN/mDcXDvFeDdToo8=
+github.com/bakhodur-nazriev/bank v1.0.0 h1:ENNaaEwK9MS9qGD7gwKaXVKEUtBYPX909uORCaayFQw=
+github.com/bakhodur-nazriev/bank v1.0.0/go.mod h1:BsAn0igPBI4VAW8kpRjEPXOOICrUAElzaDdEDP8VQNc=
+github.com/bakhodur-nazriev/bank/v2 v2.0.0 h1:75yGKktWJPlPZl6fV/uYOWHzECG2yBEbKBTHVTJ7YYQ=
 github.com/bakhodur-nazriev/bank/v2 v2.0.0/go.mod h1:R4DWLbT49ys651FEbapBs9E62Cx4hpv/zGoRKYBTK0g=
