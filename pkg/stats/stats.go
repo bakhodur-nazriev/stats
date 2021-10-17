@@ -4,7 +4,7 @@ import (
 	"github.com/bakhodur-nazriev/bank/v2/pkg/types"
 )
 
-/*// Avg рассчитывает среднюю сумму платежа.
+// Avg рассчитывает среднюю сумму платежа.
 func Avg(payments []types.Payment) (avgSum types.Money) {
 	var total types.Money
 	var sum []types.Money
@@ -36,7 +36,7 @@ func TotalInCategory(payments []types.Payment, category types.Category) (res typ
 	}
 
 	return
-}*/
+}
 
 // CategoriesAvg рассчитывает среднюю сумму категории платежа.
 func CategoriesAvg(payments []types.Payment) map[types.Category]types.Money {
