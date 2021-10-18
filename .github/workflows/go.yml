@@ -2,7 +2,7 @@ name: Go
 
 on:
   push:
-    branches: [ master, main, v1, v2, feature/categories-average, feature/categories-total, feature/filter-by-category ]
+    branches: [ master, main, v1, v2 ]
   pull_request:
     branches: [ master, main ]
 
